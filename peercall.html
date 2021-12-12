@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="icon" type="image/png"  href="./resources/favicon.png"/> -->
+    <link rel="shortcut icon" href="./resources/webicon.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="peer.css">
+    <title>VConclave</title>
+</head>
+<body>
+    <div class="topmenu">
+        <div class="profile" >
+            <img id="image" src="./resources/avatar.png" style="width: 100%">
+        </div>
+        <div class="menuitems">
+            <h3><span id= "acName"style="font-size: 18px; opacity: 0.8;">Name</span><br><span id="span" style="opacity: 0.4;">Email-id</span></h3>
+            <ul>
+                <li><img src="./resources/account1.png"><a href="#">My Profile</a></li>
+                <li><img src="./resources/edit1.png" ><a href="#">Edit Profile</a></li>
+                <li><img src="./resources/logout1.png"><a href="#" onclick="logout()">Log out</a></li>
+            </ul>
+        </div>
+        
+        <!-- onclick="menuToggle();" -->
+    </div>
+    <main>
+
+        <div class="video">
+            <!-- <img src="./resources/pexels-photo-6325984.jpeg" alt=""> -->
+        <video class= "primary-video" autoplay muted id="local-video"></video>
+        </div>
+
+        <div class="call-layout">
+    
+            <div class="wrapper">
+                <div class="call-box">
+                    <input type="text" id="call-id" class="call-txt" placeholder="Type an email to audio call">
+                    <div id="call-Btn" class="btn" onclick="call()">
+                        <img src="./resources/call.png" alt="">
+                    </div>
+                    <div id="cancel-Btn" class="btn" onclick="callCancel()" style="background-color: crimson; transition: none; display: none;">
+                        <img src="./resources/callEnd.png" alt="">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="wrapper2">
+                <div class="call-box">
+                    <input type="text" id="vcall-id" class="call-txt" placeholder="Type an email to video call">
+                    <div id="vcall-btn" class="btn">
+                        <img src="./resources/vcall.png" >
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+           
+    
+    </main>
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-database.js"></script>
+    
+    <script src="firebase.js"></script>
+
+
+    <script src="./peercall.js"></script>
+</body>
+</html>

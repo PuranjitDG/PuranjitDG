@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="home.css">
+    <title>Main</title>
+</head>
+<body>
+    
+        <div class="topmenu">
+            <div class="profile" >
+                <img src="./resources/avatar.png"  style="width: 100%">
+                
+            </div>
+            <div class="menuitems">
+                <h3 id="pname">Profile Name<br><span id="span">Email-id</span></h3>
+                <ul>
+                    <li><img src="./resources/account1.png"><a href="#" >My Profile</a></li>
+                    <li><img src="./resources/edit1.png" ><a href="#" onclick="togglemenu()">Edit Profile</a></li>
+                    <li><img src="./resources/logout1.png"><a href="#" onclick="logout()">Log out</a></li>
+                </ul>
+            </div>
+            
+            <!-- onclick="menuToggle();" -->
+        </div>
+    
+    
+   
+ 
+    <div class="card">
+        <div class="img_holder">
+            <img src="./resources/pexels-photo-6325984.jpeg" >
+        </div>
+        <div class="content">
+            <h2>Peer Meeting</h2>
+            <br>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam blanditiis voluptatem iusto, maxime ducimus doloribus!</p>
+            <br>
+            <a href="#" id="peer-call" class="btn">Open</a>
+        </div>
+        <br>
+       
+    </div>
+    
+    <div class="card">
+        <div class="img_holder">
+            <img src="./resources/pexels-photo-4226140.jpeg" >
+        </div>
+        <div class="content">
+            <h2>Group Meeting</h2>
+            <br>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam blanditiis voluptatem iusto, maxime ducimus doloribus!</p>
+            <br>
+            <a href="#" class="btn">Open</a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="img_holder">
+            <img src="./resources/pexels-charlie-solorzano-1762815.jpg" >
+        </div>
+        <div class="content">
+            <h2>Chess</h2>
+            <br>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam blanditiis voluptatem iusto, maxime ducimus doloribus!</p>
+            <br>
+            <a href="#" class="btn">Open</a>
+        </div>
+    </div>
+
+
+    <!-- profile pg -->
+    <div class="modal-bg">
+        <img id="cancelBtn" src="./resources/cancel.png" >
+       
+                <div class="modal-profile"> 
+                
+                    <!-- <h1 style="color: yellow;">Profile</h1> -->
+                        <div class="profile-class">
+                            <img src="./resources/avatar.png" id="photo">
+                        <input type="file" class="ac-file" id="file">
+                        <label for="file" id="uploadBtn">Upload Photo</label>
+                    </div>
+                    <div class="form">
+                        <input type="text" id="name" placeholder="" class="form_input" >
+                        <label for="name" id="label" class="form_label">Name</label> 
+                    
+                        <!-- <input type="text" name="profession" placeholder="Profession"> -->
+                        
+                        <!-- <div class="btn-class"> -->
+                    
+                        <!-- <button class="btn" style="background-color: red;" onclick="untogglemenu()">Cancel</button> -->
+                    <!-- </div> -->
+                   <div class="button" onclick="upload()">Update</div>
+               </div>
+               
+
+                </div>
+         
+    </div>
+    
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-database.js"></script>
+    
+    <script src="firebase.js"></script>
+    <script src="home.js"></script>
+</body>
+</html>
